@@ -7,16 +7,73 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <ion-row>
+  <!-- coluna da esquerda -->
+  <ion-col size="2">
+    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  </ion-col>
+  <!-- coluna da direita -->
+  <ion-col size="10">
+	<!-- nome -->
+		<ion-row>
+			<ion-col size="12">
+				<ion-item lines="none">
+					<ion-label>{{ this.perfil.nome }}</ion-label>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+		<!--profissao-->
+		<ion-row>
+			<ion-col size="12">
+				<ion-item lines="none">
+					<ion-label>{{ this.perfil.profissao }}</ion-label>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+		<!--botao-->
+		<ion-row>
+			<ion-col size="6">
+				<ion-item lines="none">
+					<ion-button>Seguir</ion-button>
+				</ion-item>
+			</ion-col>
+			<ion-col size="6">
+				<ion-item lines="none">
+					<ion-button [disabled]="true">Mensagem</ion-button>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+ </ion-col>
+</ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+<!--seguidores-->
+
+  <ion-row>
+
+    <ion-col size="4" class="metrica ion-text-center">
+		<h3>{{ this.metricas_sociais.curtidas }}</h3>
+		<h4>Curtidas</h4>
+	</ion-col>
+
+	<ion-col size="4" class="metrica">
+		<h3>{{ this.metricas_sociais.seguidores }}</h3>
+		<h4>Seguidores</h4>
+	</ion-col>
+
+	<ion-col size="4" class="metrica">
+		<h3>{{ this.metricas_sociais.amigos }}</h3>
+		<h4>Amigos</h4>
+</ion-col>
+
+</ion-row>
+
+<!--sobre-->
+<ion-row>
+	<ion-col size="12">
+		<ion-item lines="nome">
+			<ion-label><h1>Sobre</h1>{{ this.perfil.biografia }}</ion-label>
+		</ion-item>
+	</ion-col>
+
+</ion-row>
 </ion-content>
