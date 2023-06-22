@@ -1,27 +1,11 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.imagem_fundo{
+  --background:rgb(12, 7, 7);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.tamanho_pagina{
+  width:100%;
+  height:45vh;
+  font-weight: bold;
+  color: rgb(0, 8, 8);
+  background-color: rgb(252, 249, 249);
 }

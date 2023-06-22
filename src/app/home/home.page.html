@@ -1,44 +1,86 @@
-<ion-content [fullscreen]="true">
-  <ion-grid>
-  <ion-row>
-    <ion-button color="medium"(click)="exibir(1)">C</ion-button>
-    <ion-button color="medium"(click)="exibir(2)">+/-</ion-button>
-    <ion-button color="medium"(click)="exibir(3)">⌫</ion-button>
-    <ion-button color="warning"(click)="exibir(4)">/</ion-button>
-  </ion-row>
-</ion-grid>
+<ion-content [fullscreen]="true" class="imagem_fundo">
+    <ion-input type="text" class="tamanho_pagina">{{v2}}</ion-input>
 
-<ion-grid>
-  <ion-row>
-    <ion-button color="dark" (click)="exibir(5)">7</ion-button>
-    <ion-button color="dark" (click)="exibir(6)">8</ion-button>
-    <ion-button color="dark"(click)="exibir(7)">9</ion-button>
-    <ion-button color="warning" (click)="exibir(8)">*</ion-button>
-  </ion-row>
-</ion-grid>
+  <ion-row size="6"> 
+    <ion-col size="12">
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="medium" shape="round"(click)="apagar()"> C </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full"  color="medium" shape="round"(click)="operacao('+/-')"> +/- </ion-button>
+        </ion-col>
+        
+        <ion-col>
+          <ion-button expand="full" color="medium" shape="round"(click)="operacao('%')"> % </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="primary" shape="round"(click)="operacao('/')"> / </ion-button>
+        </ion-col>
+      </ion-row>
 
-<ion-grid>
-  <ion-row>
-    <ion-button color="dark" (click)="exibir(9)">4</ion-button>
-    <ion-button color="dark" (click)="exibir(10)">5</ion-button>
-    <ion-button color="dark" (click)="exibir(11)">6</ion-button>
-    <ion-button color="warning" (click)="exibir(12)">-</ion-button>
-  </ion-row>
-</ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(7)"> 7 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(8)"> 8 </ion-button>
+        </ion-col>
 
-<ion-grid>
-  <ion-row>
-    <ion-button color="dark"(click)="exibir(13)">1</ion-button>
-    <ion-button color="dark" (click)="exibir(14)">2</ion-button>
-    <ion-button color="dark" (click)="exibir(15)">3</ion-button>
-    <ion-button color="warning" (click)="exibir(16)">+</ion-button>
-  </ion-row>
-</ion-grid>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(9)"> 9 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="primary" shape="round"(click)="operacao('*')"> x </ion-button>
+        </ion-col>
+      </ion-row>
 
-<ion-grid>
-  <ion-row>
-    <ion-button color="dark" (click)="exibir(17)">0</ion-button>
-    <ion-button color="light" (click)="exibir(18)">=</ion-button>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(4)"> 4 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(5)"> 5 </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(6)"> 6 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="primary" shape="round"(click)="operacao('-')"> - </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(1)"> 1 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(2)"> 2 </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(3)"> 3 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="primary" shape="round"(click)="operacao('+')"> + </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="full" color="light" shape="round"(click)="exibir(0)"> 0 </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  expand="full"color="dark" shape="round"(click)="ponto()"> . </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button expand="full" color="primary" shape="round"(click)="calcular()"> = </ion-button>
+        </ion-col>
+      </ion-row>
+
+      
+    </ion-col>
   </ion-row>
-</ion-grid>
 </ion-content>
