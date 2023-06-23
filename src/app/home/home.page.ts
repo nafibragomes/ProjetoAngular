@@ -66,7 +66,7 @@ export class HomePage {
     this.decimal=true
   }
   
-  // Botão para apagar ou corrigir algum erro anteior
+  // Botão para apagar ou corrigir algum erro anterior
   apagar() {
     this.v2 = 0;
     this.v1 = 0;
