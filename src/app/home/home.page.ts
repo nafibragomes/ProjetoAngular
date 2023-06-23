@@ -2,17 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
-@Component({ 
+@Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule,CommonModule],
+  imports: [IonicModule, CommonModule],
 })
-
-
 export class HomePage {
-  // declarações
+
   v1=0;
   v2=0;
   numero='number';
@@ -20,19 +18,19 @@ export class HomePage {
   decimal=false;
   decimals=0;
 
-  // Salva e mostra o que colocamos 
 
+  // Exibe os dados colocados
   exibir(n: number) {
 		switch (this.numero) {
-      case 'number':
-        if (this.decimal) {
-          this.decimals++;
-          this.v2 = this.v2 + n * Math.pow(10, -this.decimals);
+    case 'number':
+      if (this.decimal) {
+       this.decimals++;
+       this.v2 = this.v2 + n * Math.pow(10, -this.decimals);
         } else {
           this.v2 = this.v2 * 10 + n;
         }
 
-        break;
+      break;
       case 'operator':
         this.v2 = n;
         this.numero = 'number';
@@ -44,8 +42,8 @@ export class HomePage {
     }
   }
 
-  // Seleciona os operadores 
-
+  
+// Salva e mostra os operadores
   operacao(o: string) {
     this.calcular();
     this.operador = o
@@ -53,8 +51,8 @@ export class HomePage {
     this.numero = 'operator';
   }
 
-  // Aparece o resultado ao apertar no botão "="
-
+  
+// Aparece o resultado ao apertar no botão "=" 
   calcular(){
     this.v2 = eval('' + this.v1 + this.operador + '(' + this.v2 + ')');
     this.v1 = 0;
@@ -63,9 +61,7 @@ export class HomePage {
     this.decimal = false;
     this.decimals = 0;
   }
-
-  // Adiciona as operações com "." 
-
+ // Adiciona as operações com "."
   ponto(){
     this.decimal=true
   }
